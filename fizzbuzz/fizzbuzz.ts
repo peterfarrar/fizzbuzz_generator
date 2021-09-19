@@ -1,8 +1,8 @@
-function* fizzbuzz (fizz: number, bang: number, max: number): IterableIterator<string | void> {
+function* fizzbuzz (fizz: number, buzz: number, max: number): IterableIterator<string | void> {
   if (max < 1) throw new Error('FizzBuzz: max value must be at least 1')
   
   for (let i: number = 1; i <= max; i++) {
-    const result: string = (i%fizz ? '' : 'fizz') + (i%bang ? '' : 'bang')
+    const result: string = (i%fizz ? '' : 'Fizz') + (i%buzz? '' : 'Buzz')
     yield (result ? result : i.toString())
   }
 }
